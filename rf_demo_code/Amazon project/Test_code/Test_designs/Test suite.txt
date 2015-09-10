@@ -2,5 +2,8 @@
 Resource          ../Resources/00_Master_resource_file.txt
 
 *** Test Cases ***
+Search on amazon
+    #    Preconditions & actions:
+    Perform a simple search    The Doors    Movies & TV
 
 *** Keywords ***

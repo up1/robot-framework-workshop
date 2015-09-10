@@ -1,0 +1,4 @@
+*** Settings ***
+Suite Setup       Suite setup
+Suite Teardown    Suite teardown
+Resource          ../Resources/00_Master_resource_file.txt

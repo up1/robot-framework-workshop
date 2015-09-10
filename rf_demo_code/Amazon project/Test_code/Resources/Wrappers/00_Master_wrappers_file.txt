@@ -1,3 +1,3 @@
 *** Settings ***
 Resource          ${CURDIR}/01_Generic_wrappers.txt
-Resource          First_wrapper_library.txt
+Resource          Search_Amazon.txt

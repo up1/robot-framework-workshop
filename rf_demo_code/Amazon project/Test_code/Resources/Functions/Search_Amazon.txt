@@ -1,0 +1,17 @@
+*** Settings ***
+Resource          ../00_Master_resource_file.txt
+
+*** Keywords ***
+Perform a simple search
+    [Arguments]    ${searchString}    ${searchCategory}
+    #    Set the search category combo
+    Wait Until Page Contains Element    ${cmb_Select category}    timeout=5
+    Select From List By Label    ${cmb_Select category}    ${searchCategory}
+    #    Enter a search string
+    Wait Until Page Contains Element    ${txt_Search field}    timeout=5s
+    Input Text    ${txt_Search field}    ${searchString}
+    #    Click the search button
+    Wait Until Page Contains Element    ${btn_Search}    timeout=5s
+    Click Element    ${btn_Search}
+    #    Use the omnipresent Amazon search field for a basic wait state
+    Wait Until Page Contains Element    //a[text()='${searchCategory}']/following-sibling::*[1]/span[contains(text(),'${searchString}')]    timeout=5s

@@ -1,4 +1,3 @@
 *** Settings ***
 Resource          ${CURDIR}/01_Generic_variables.txt
-Resource          ${CURDIR}/First_variables_file.txt
-Resource          Simple_search.txt
+Resource          ${CURDIR}/Search_Amazon.txt

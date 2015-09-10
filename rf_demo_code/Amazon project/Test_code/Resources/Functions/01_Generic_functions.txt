@@ -1,2 +1,17 @@
 *** Settings ***
 Resource          ../00_Master_resource_file.txt
+
+*** Keywords ***
+Suite setup
+    Open an Amazon page    browser=${defBrowser}    urlExtension=goldbox
+
+Open an Amazon page
+    [Arguments]    ${urlExtension}=${EMPTY}    ${browser}=${defbrowser}
+    #    Open the browser to amazon    When no url extension has been provided, go to the amazon main page
+    Open browser    ${amazonMainURL}/${urlExtension}    browser=${browser}
+    Maximize Browser Window
+    #    Use the omnipresent Amazon search field for a basic wait state
+    Wait Until Page Contains Element    ${txt_Search field}    timeout=5s
+
+Suite teardown
+    Close Browser
