@@ -13,6 +13,7 @@ sudo apt-get install -y python-wxgtk2.8
 sudo pip install robotframework
 sudo pip install robotframework-ride==1.5a2
 sudo pip install robotframework-selenium2library
+sudo pip install pygments
 sudo pip install WebTest
 sudo pip install livetest
 sudo pip install --upgrade robotframework-httplibrary
